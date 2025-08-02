@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Wire Apex">
+        <div class="slds-m-around_medium">
+            <template for:each={data} for:item="Opp">
+                <div key={Opp.Id}>
+                    <p>{Opp.Id} : {Opp.Name}</p>
+                </div>
+            </template>
+            <hr/>
+            <template for:each={data1} for:item="Opp">
+                <div key={Opp.Id}>
+                    <p>{Opp.Id} : {Opp.Name}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

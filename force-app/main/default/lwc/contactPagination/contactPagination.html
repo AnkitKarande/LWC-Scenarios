@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Contact List">
+        <template if:true={contactData}>
+            <div class="slds-m-around_medium">
+                <lightning-datatable
+                    key-field="Id"
+                    data={currentData}
+                    columns={contactFields}
+                    hide-checkbox-column
+                    show-row-number-column
+                    row-number-offset={rowOffSet}
+                ></lightning-datatable>
+
+                <div class="slds-m-around_medium">
+                    <lightning-button label="Previous" variant="brand" onclick={previousPage}></lightning-button>
+                    <span class="slds-p-right_medium slds-p-left_medium">Page {pageNumber} of {totalPages}</span>
+                    <lightning-button label="Next" variant="brand" onclick={nextPage}></lightning-button>
+                </div>
+            </div>
+        </template>
+        
+    </lightning-card>
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Navigation">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Home Page" onclick={navigateToHomePage}></lightning-button>
+            <lightning-button label="Chatter Page" onclick={navigateToChatterPage}></lightning-button>
+            <hr/>
+            <lightning-button label="New Contact Record" onclick={navigateToNewContactRecordPage}></lightning-button>
+            <lightning-button label="New Account Record" onclick={navigateToNewAccountRecordPage}></lightning-button>
+            <lightning-button label="Open Case List View" onclick={navigateToCaseListView}></lightning-button>
+            <lightning-button label="Open Files" onclick={navigateToFiles}></lightning-button>
+            <hr/>
+            <lightning-button label="Open Opportunity Record" onclick={navigateToOpportunityRecord}></lightning-button>
+            <lightning-button label="Edit People Record" onclick={navigateToEditPeopleRecord}></lightning-button>
+            <hr/>
+            <lightning-button label="Open Search Tab" onlick={navigateToSearchTab}></lightning-button>
+            <hr/>
+            <lightning-button label="Open Related OLI Records" onclick={navigateToRelatedRecords}></lightning-button>
+            <hr/>
+            <lightning-button label="open google" onclick={navigateToGoogle}></lightning-button>
+            <hr/>
+            <lightning-button label="open LWC" onclick={navigateToLWC}></lightning-button>
+            <hr/>
+            <p>{pageReference}</p>
+        </div>
+    </lightning-card>
+</template>

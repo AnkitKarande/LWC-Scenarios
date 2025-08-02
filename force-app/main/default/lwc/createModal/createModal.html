@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title={title}>
+        <div class="slds-m-around_medium modal-body">
+            <lightning-record-form
+                object-api-name={objectType}
+                columns="2"
+                layout-type="Full"
+                mode="edit"
+                onsuccess={handleSuccess}
+                oncancel={handleCancel}
+                onerror={handleError}
+                onsubmit={handleSubmit}
+            ></lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

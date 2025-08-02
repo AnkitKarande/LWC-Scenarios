@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Account Dashboard Information">
+        <template lwc:if={accounts.data}>
+            <div class="slds-m-around_medium">
+                <lightning-datatable
+                key-field="Id"
+                data={accounts.data}
+                columns={columns}
+                hide-checkbox-column="true"
+                show-row-number-column="true"
+                onrowaction={handleRowActions}
+                ></lightning-datatable>
+            </div>
+        </template>
+        <template lwc:elseif={accounts.error}>
+            <p> Failed to load Records</p>
+        </template>
+    
+    </lightning-card>
+</template>

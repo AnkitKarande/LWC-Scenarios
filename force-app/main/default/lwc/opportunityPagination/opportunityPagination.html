@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Opportunity Records">
+        <template if:true={oppData}>
+                <div class="slds-m-around_medium">
+                <lightning-datatable
+                    key-field="Id"
+                    data={currentData}
+                    columns={oppColumn}
+                    hide-checkbox-column
+                    show-row-number-column
+                    row-number-offset={offSet}
+                ></lightning-datatable>
+                    
+                <div class="slds-p-around_medium">
+                    <lightning-button label="Previous" disabled={prevDisabled} onclick={handlePrevious} variant="brand"></lightning-button>
+                    <span class="slds-m-left_small slds-m-right_small">Page {pageNumber} of {TotalPages}</span>
+                    <lightning-button label="Next" disabled={nextDisabled} onclick={handleNext} variant="brand"></lightning-button>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+</template>

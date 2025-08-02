@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="List Of OpportunityLineItem">
+        <div class="slds-m-around_medium">
+            <lightning-datatable 
+                data={oppListItemData}
+                key-field="Id"
+                columns={columns}
+                onsave={saveHandler}
+                draft-values={draftValues}
+                hide-checkbox-column
+            ></lightning-datatable>
+        </div>
+    </lightning-card>
+    
+</template>

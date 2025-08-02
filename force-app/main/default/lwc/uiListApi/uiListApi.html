@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="uiListApi">
+        <div class="slds-m-around_medium">
+            <template for:each={data} for:item="opp">
+                <div key={opp.fields.Id.value}>
+                    <p>{opp.fields.Name.value}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
