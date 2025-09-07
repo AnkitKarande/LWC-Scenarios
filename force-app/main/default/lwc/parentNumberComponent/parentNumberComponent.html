@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Number Component">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Number" value={Value} disabled="true"></lightning-input>
+            <c-child-number-component onincrement={handleIncrement} ondecrement={handleDecrement}></c-child-number-component>
+        </div>
+    </lightning-card>
+</template>
